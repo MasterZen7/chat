@@ -1,0 +1,206 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /*     -moz-osx-font-smoothing: grayscale; */
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+* {
+    font-family: "Estonia", cursive;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #262626;
+}
+
+.header {
+    background-color: #262626;
+    overflow: visible;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.messagesList {
+    padding: 20px 0;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.messagesMessage {
+    display: flex;
+    margin-top: 10px;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.messagesMessage .currentMember {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.messageContent {
+    display: inline-block;
+}
+
+.currentMember > .messageContent {
+    align-items: flex-end;
+}
+
+.messageContent > .username {
+    display: block;
+    color: #000;
+    font-size: 1.8rem;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+
+.messageContent > .text {
+    padding: 12px;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 12px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 1.8rem;
+}
+
+.currentMember > .messageContent .text {
+    background-color: #000;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 3px solid #b30606;
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 40px;
+    font-size: 16px;
+    background-color: #b30606;
+    color: #fff;
+    border: 5px solid #b30606;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+button:hover {
+    background-color: #5a3e3e;
+    border-color: #5a3e3e;
+}
+
+.input {
+    background-color: #262626;
+}
+
+.styles_scrollable-div__prSCv {
+    background-color: #b3b2b2;
+}
+
+.login {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 30rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.avatar {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+select {
+    width: 30rem;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    border: 3px solid #b30606;
+}
+
+option {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.timeStamp {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 520px) and (min-width: 360px) {
+    input {
+        width: 20rem;
+    }
+    select {
+        width: 20rem;
+    }
+}
