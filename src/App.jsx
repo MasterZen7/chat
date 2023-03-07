@@ -4,6 +4,12 @@ import Input from "./Input";
 import UsernameInput from "./UsernameInput";
 
 class App extends Component {
+    state = {
+        messages: [],
+        username: "",
+        avatar: "",
+    };
+
     handleUsernameSubmit = (username, avatar) => {
         if (!username || !avatar) {
             return;
