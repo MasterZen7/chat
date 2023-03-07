@@ -4,12 +4,6 @@ import Input from "./Input";
 import UsernameInput from "./UsernameInput";
 
 class App extends Component {
-    state = {
-        messages: [],
-        username: "",
-        avatar: "",
-    };
-
     handleUsernameSubmit = (username, avatar) => {
         if (!username || !avatar) {
             return;
@@ -31,6 +25,13 @@ class App extends Component {
                 this.setState({ messages });
             });
             this.setState({ clientId, drone, username, avatar });
+        });
+    };
+
+    onSendMessage = (message) => {
+        this.state.drone.publish({
+            room: "observable-room",
+            message,
         });
     };
 
@@ -62,13 +63,6 @@ class App extends Component {
             </div>
         );
     }
-
-    onSendMessage = (message) => {
-        this.state.drone.publish({
-            room: "observable-room",
-            message,
-        });
-    };
 }
 
 export default App;
