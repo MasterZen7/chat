@@ -1,5 +1,4 @@
 # Chat
-This is a realtime chat application working with scaledrone made with ReactJS.
 
 ## About
 Realtime chat application with scaledrone \
